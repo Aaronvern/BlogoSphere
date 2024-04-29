@@ -2,6 +2,10 @@
 
 Blogosphere is a minimalist blogging app built with React and Redux, powered by Appwrite. It offers a user-friendly interface for creating, managing, and sharing blog content. With a responsive design and SEO optimization, it's the perfect platform for bloggers to express their thoughts and engage with their audience.
 
+## Development Status
+
+Blogosphere is still under development. Some features may be incomplete or in progress.feedbackS are appreciated as i work towards a stable release.
+
 ## Features
 
 - **User-Friendly Interface**: Intuitive UI for seamless blog management.
@@ -18,6 +22,3 @@ Blogosphere is a minimalist blogging app built with React and Redux, powered by 
 - **Redux**: State management library for managing application state.
 - **Appwrite**: Backend as a Service (BaaS) platform for user authentication, database management, and file storage.
 
-## Development Status
-
-Blogosphere is still under development. Some features may be incomplete or in progress. Contributions and feedback are appreciated as i work towards a stable release.
