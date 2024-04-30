@@ -1,6 +1,6 @@
 import config from "../config/config.js";
 
-import { Client, Account, ID , Databases , Query } from "appwrite";
+import { Client, Account, ID , Databases , Query ,Storage } from "appwrite";
 
 export class Service{
     client = new Client();
@@ -91,9 +91,24 @@ export class Service{
     //file upload services
     async uploadFile(file){
         try {
-
+            return await this.bucket.createFile(
+                config.appwriteBucketId,
+                ID.unique
+            )
         }catch(error){
             console.log("appwrite services:: uploadFile :: error",error)
+        }
+    }
+    async deleteFile(fileId){
+        try{
+            await this.bucket.deleteFile(
+                config.appwriteBucketId,
+                fileId
+            )
+            return true;
+        }catch(error){
+            console.log("appwrite services:: deleteFile :: error",error)
+            return false ;
         }
     }
 }
