@@ -111,8 +111,14 @@ export class Service{
             return false ;
         }
     }
+    getFilePreview(fileId){
+        this.bucket.getFilePreview(
+            config.appwriteBucketId,
+            fileId,
+            
+        )
+    }
 }
-
 const service = new Service();
 
 export default service
