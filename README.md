@@ -95,3 +95,13 @@ In designing Blogosphere's backend services, I've prioritized backend agnosticis
 - Reusable select/dropdown component.
 - Supports options, labels, and classNames.
 - Utilizes `forwardRef` for select element reference.
+
+### Signup Component:
+- Facilitates user registration for the blogging app.
+- Utilizes `react-hook-form` for form validation.
+- Manages account creation and error handling.
+
+### Protected Component:
+- Secures routes based on user authentication status.
+- Displays loading message during authentication check.
+- Supports customization for authentication requirement.
