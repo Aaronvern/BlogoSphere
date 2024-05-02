@@ -101,7 +101,22 @@ In designing Blogosphere's backend services, I've prioritized backend agnosticis
 - Utilizes `react-hook-form` for form validation.
 - Manages account creation and error handling.
 
-### Protected Component:
+### AuthLayout Component:
 - Secures routes based on user authentication status.
 - Displays loading message during authentication check.
 - Supports customization for authentication requirement.
+
+### RTE Component:
+- Integrates a rich text editor into a React application.
+- Utilizes `@tinymce/tinymce-react` for the editor functionality.
+- Incorporates `react-hook-form` for form management.
+- Provides customization options for editor configuration.
+- Enables users to input and format text with various styling options.
+
+## PostForm Component:
+- Manages form submission for creating or updating blog posts.
+- Utilizes `react-hook-form` for form handling and validation.
+- Incorporates various input components like Input, RTE (Rich Text Editor), and Select for user interaction.
+- Allows users to upload a featured image for the post.
+- Supports dynamic rendering based on whether the component is used for creating a new post or updating an existing one.
+- Integrates with the backend service (`service` module) for file upload and post creation/update operations.
