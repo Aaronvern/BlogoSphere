@@ -120,3 +120,48 @@ In designing Blogosphere's backend services, I've prioritized backend agnosticis
 - Allows users to upload a featured image for the post.
 - Supports dynamic rendering based on whether the component is used for creating a new post or updating an existing one.
 - Integrates with the backend service (`service` module) for file upload and post creation/update operations.
+
+## Pages
+
+### SignupPage
+
+- Renders the Signup component for user registration/authentication.
+
+### Post
+
+- Displays a single post based on the slug parameter from the URL.
+- Parses post content from HTML.
+- Allows post author to edit or delete the post if authenticated.
+- Redirects to the homepage if no post is found.
+- Technologies: React, React Router DOM, HTML React Parser, Redux (for authentication), Appwrite (for backend services).
+
+### LoginPage
+
+- Renders the Login component for user authentication.
+- Technologies: React, Redux (for authentication).
+
+### Home
+
+- Homepage displaying multiple PostCards.
+- Fetches posts and renders PostCard components for each.
+- Prompts users to log in if no posts are available.
+- Technologies: React, Appwrite (for backend services).
+
+### EditPost
+
+- Allows users to edit an existing post.
+- Retrieves post data based on the slug parameter from the URL.
+- Renders a PostForm component with the post data if found.
+- Redirects to the homepage if no post is found.
+- Technologies: React, React Router DOM, Appwrite (for backend services).
+
+### AllPosts
+
+- Displays all available posts.
+- Fetches and renders PostCard components for each post.
+- Technologies: React, Appwrite (for backend services).
+
+### AddPost
+
+- Renders a form (PostForm component) to add a new post.
+- Technologies: React, Appwrite (for backend services).

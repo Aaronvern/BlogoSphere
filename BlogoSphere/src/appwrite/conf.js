@@ -1,6 +1,6 @@
 import config from "../config/config.js";
 
-import { Client, Account, ID , Databases , Query ,Storage } from "appwrite";
+import { Client, ID , Databases , Query ,Storage } from "appwrite";
 
 export class Service{
     client = new Client();
@@ -14,6 +14,7 @@ export class Service{
         this.bucket = new Storage(this.client)
     }
     async createPost( {title,content,featuredImage,status,userid}){
+        
         try{
             return await this.databases.createDocument(
                 config.appwriteDatabaseId,
@@ -63,6 +64,8 @@ export class Service{
         
     }
     async getPost(slug){
+        console.log("hello")
+        console.log(config.appwriteCollectionId)
         try{
             await this.databases.getDocument(
                 config.appwriteDatabaseId,
