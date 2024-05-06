@@ -24,7 +24,6 @@ export default function PostForm({ post }) {
     const submit = async (data) => {
         if (post) {
             const file = data.image[0] ? await service.uploadFile(data.image[0]) : null;
-
             if (file) {
                 service.deleteFile(post.featuredImage);
             }
@@ -39,7 +38,7 @@ export default function PostForm({ post }) {
             }
         } else {
             const file = await service.uploadFile(data.image[0]);
-
+            console.log(uploadFile);
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
